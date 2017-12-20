@@ -1,0 +1,23 @@
+{
+  "name": "bmico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vidorge/bmico.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vidorge/bmico/issues"
+  },
+  "homepage": "https://github.com/vidorge/bmico#readme",
+  "dependencies": {
+    "truffle": "^4.0.1",
+    "zeppelin-solidity": "^1.4.0"
+  }
+}
