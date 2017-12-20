@@ -37,7 +37,7 @@ async function liveDeploy(deployer, accounts) {
   const RATE      = new BigNumber(16000);
   const cap       = ether(12187,5);
   const goal      = ether(2437,5);  
-  const coinCap   = new BigNumber(300000000);
+  const coinCap   = ether(300000000);
 
   console.log([
     startTime,
