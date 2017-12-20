@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vidorge/bmico#readme",
   "dependencies": {
+    "ganache-cli": "^6.0.3",
     "truffle": "^4.0.1",
     "zeppelin-solidity": "^1.4.0"
   }
