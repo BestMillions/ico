@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "genache": "./node_modules/.bin/ganache-cli",
+    "ganache": "scripts/run_ganache.sh",
     "compile": "./node_modules/.bin/truffle compile",
     "migrate": "./node_modules/.bin/truffle migrate --reset"
   },
