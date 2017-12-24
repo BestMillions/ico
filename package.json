@@ -21,8 +21,12 @@
   "homepage": "https://github.com/vidorge/bmico#readme",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "ethjs": "^0.3.1",
+    "express": "^4.16.2",
     "ganache-cli": "^6.0.3",
     "truffle": "^4.0.1",
+    "truffle-flattener": "^1.2.0",
+    "web3": "^0.20.2",
     "zeppelin-solidity": "^1.4.0"
   },
   "devDependencies": {
