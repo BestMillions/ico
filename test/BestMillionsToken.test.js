@@ -48,18 +48,12 @@ contract('BestMillionsToken', function (accounts) {
     Pause tests
   */
   it('should return paused false after construction', async function () {
-
-    await token.mint(accounts[0], 100);
-
     let paused = await token.paused();
 
     assert.equal(paused, false);
   });
 
   it('should return paused true after pause', async function () {
-
-    await token.mint(accounts[0], 100);
-
     await token.pause();
     let paused = await token.paused();
 
@@ -67,9 +61,6 @@ contract('BestMillionsToken', function (accounts) {
   });
 
   it('should return paused false after pause and unpause', async function () {
-
-    await token.mint(accounts[0], 100);
-
     await token.pause();
     await token.unpause();
     let paused = await token.paused();
