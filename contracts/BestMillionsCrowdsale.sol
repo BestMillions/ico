@@ -60,9 +60,7 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
     }
 
     function calculateRate() internal view returns (uint256) {
-        
-        // TODO: write tests for rate calculation
-        /*
+                
         if ( now < startTime + 1 days )
             return rate * 130 / 100;
         else if ( now < startTime + 1 days + 7 days )
@@ -75,9 +73,6 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
             return rate * 105 / 100;
         else
             return rate;
-        */
-
-        return rate;
 
     }
 
