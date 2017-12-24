@@ -33,12 +33,13 @@ async function liveDeploy(deployer, accounts) {
   const BigNumber = web3.BigNumber;
 
   const startTime = latestTime() + duration.weeks(1);
-  const endTime   = startTime + duration.weeks(1);
+  const endTime   = startTime + duration.days(1) + duration.weeks(5);
   const RATE      = new BigNumber(16000);
   const cap       = ether(12187,5);
   const goal      = ether(2437,5);  
   const coinCap   = ether(300000000);
 
+  /*
   console.log([
     startTime,
     endTime,
@@ -48,6 +49,7 @@ async function liveDeploy(deployer, accounts) {
     goal.toNumber(),
     coinCap.toNumber()
   ]);
+  */
 
   // uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet, uint256 _cap, uint256 _goal, uint256 _coinCap
   return deployer.deploy(BestMillionsCrowdsale, startTime, endTime, RATE, accounts[0], cap, goal, coinCap).then(async () => {
@@ -55,6 +57,7 @@ async function liveDeploy(deployer, accounts) {
     const instance  = await BestMillionsCrowdsale.deployed();
     const token     = await instance.token.call();
 
+    console.log('Crowdsale address', instance.address);
     console.log('Token address', token);
 
   });
