@@ -23,6 +23,24 @@ contract('BestMillionsCrowdsale', function ([owner, wallet, investor]) {
   before(async function () {
     // Advance to the next block to correctly read time in the solidity "now" function interpreted by testrpc
     await advanceBlock();
+    
+    this.getCurrentRate = function(time) {
+  
+      if ( time < duration.days(1) )
+        return RATE.mul(130).div(100);
+      else if ( time < duration.days(1) + duration.days(7) )
+        return RATE.mul(120).div(100);
+      else if ( time < duration.days(1) + duration.days(7) + duration.days(7) )
+        return RATE.mul(115).div(100);
+      else if ( time < duration.days(1) + duration.days(7) + duration.days(7) + duration.days(7) )
+        return RATE.mul(110).div(100);
+      else if ( time < duration.days(1) + duration.days(7) + duration.days(7) + duration.days(7) + duration.days(7) )
+        return RATE.mul(105).div(100);
+      else
+        return RATE;
+
+    }
+
   });
 
   beforeEach(async function () {
@@ -85,9 +103,11 @@ contract('BestMillionsCrowdsale', function ([owner, wallet, investor]) {
 
   it('should accept payments during the sale', async function () {
     const investmentAmount = ether(1);
-    const expectedTokenAmount = RATE.mul(investmentAmount);
+    const timeFromStart = duration.hours(3);
 
-    await increaseTimeTo(this.startTime + duration.hours(3));
+    const expectedTokenAmount = this.getCurrentRate(timeFromStart).mul(investmentAmount);
+
+    await increaseTimeTo(this.startTime + timeFromStart);
 
     await this.crowdsale.buyTokens(investor, { value: investmentAmount, from: investor }).should.be.fulfilled;
 
