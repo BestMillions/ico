@@ -2,8 +2,10 @@ pragma solidity ^0.4.18;
 
 import '../node_modules/zeppelin-solidity/contracts/token/CappedToken.sol';
 import '../node_modules/zeppelin-solidity/contracts/token/PausableToken.sol';
+import '../node_modules/zeppelin-solidity/contracts/token/BurnableToken.sol';
 
-contract BestMillionsToken is CappedToken, PausableToken {
+
+contract BestMillionsToken is CappedToken, PausableToken, BurnableToken {
 
     string public constant name = "Best Millions Token";
     string public constant symbol = "BMT";
