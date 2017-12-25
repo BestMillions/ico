@@ -40,16 +40,7 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
         return MintableToken(address(0));
     
     }
-
-    // fallback function can be used to buy tokens
-    function () external payable {
-        /*
-            Must be overriden to invoke most-derived buyTokens
-        */
-        buyTokens(msg.sender);
     
-    }
-
     function buyTokens(address beneficiary) public payable {
         require(beneficiary != address(0));
         require(validPurchase());
