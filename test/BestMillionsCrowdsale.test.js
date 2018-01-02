@@ -11,14 +11,17 @@ require('chai')
   .use(require('chai-bignumber')(BigNumber))
   .should();
 
+var config = require('../icoConfig.json');
+
 const BestMillionsCrowdsale = artifacts.require('BestMillionsCrowdsale');
 const BestMillionsToken = artifacts.require('BestMillionsToken');
 
 contract('BestMillionsCrowdsale', function ([owner, wallet, investor]) {
-  const RATE = new BigNumber(16000);
-  const GOAL = ether(2437,5);
-  const CAP = ether(12187,5);
-  const COIN_CAP = ether(300000000);
+  
+  const RATE = new BigNumber(config.baseRate);
+  const GOAL = ether(config.crowdSaleGoal_ETH);  
+  const CAP = ether(config.crowdSaleCap_ETH);
+  const COIN_CAP = ether(config.tokenCap);
 
   before(async function () {
     // Advance to the next block to correctly read time in the solidity "now" function interpreted by testrpc
@@ -45,8 +48,9 @@ contract('BestMillionsCrowdsale', function ([owner, wallet, investor]) {
 
   beforeEach(async function () {
 
-    this.startTime = latestTime() + duration.weeks(1);
-    this.endTime = this.startTime + duration.weeks(1);
+    this.startTime  = latestTime() + duration.days(1);
+    this.endTime    = this.startTime + (config.icoEnd - config.icoStart);
+
     this.afterEndTime = this.endTime + duration.seconds(1);
 
     /*

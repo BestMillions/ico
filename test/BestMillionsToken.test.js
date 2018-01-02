@@ -11,13 +11,16 @@ require('chai')
   .use(require('chai-bignumber')(BigNumber))
   .should();
 
+var config = require('../icoConfig.json');
+
 contract('BestMillionsToken', function (accounts) {
-  const cap = ether(300000000);
+
+  const COIN_CAP = ether(config.tokenCap);
 
   let token;
 
   beforeEach(async function () {
-    token = await BestMillionsToken.new(cap);
+    token = await BestMillionsToken.new(COIN_CAP);
   });
 
   /*
@@ -26,7 +29,7 @@ contract('BestMillionsToken', function (accounts) {
   it('should start with the correct cap', async function () {
     let _cap = await token.cap();
 
-    assert(cap.eq(_cap));
+    assert(COIN_CAP.eq(_cap));
   });
 
   it('should mint when amount is less than cap', async function () {
@@ -35,12 +38,12 @@ contract('BestMillionsToken', function (accounts) {
   });
 
   it('should fail to mint if the ammount exceeds the cap', async function () {
-    await token.mint(accounts[0], cap.sub(1));
+    await token.mint(accounts[0], COIN_CAP.sub(1));
     await expectThrow(token.mint(accounts[0], 100));
   });
 
   it('should fail to mint after cap is reached', async function () {
-    await token.mint(accounts[0], cap);
+    await token.mint(accounts[0], COIN_CAP);
     await expectThrow(token.mint(accounts[0], 1));
   });
 
