@@ -1,5 +1,7 @@
 var BestMillionsCrowdsale = artifacts.require('BestMillionsCrowdsale.sol');
 
+var config = require('../icoConfig.json');
+
 module.exports = function(deployer, network, accounts) {
   // Use deployer to state migration tasks.
 
@@ -32,28 +34,27 @@ async function liveDeploy(deployer, accounts) {
 
   const BigNumber = web3.BigNumber;
 
-  const startTime = latestTime() + duration.weeks(1);
-  const endTime   = startTime + duration.days(1) + duration.weeks(5);
-  const RATE      = new BigNumber(16000);
-  const cap       = ether(12187,5);
-  const goal      = ether(2437,5);  
-  const coinCap   = ether(300000000);
+  const START_TIME  = config.icoStart;
+  const END_TIME    = config.icoEnd;
+  const RATE        = new BigNumber(config.baseRate);
+  const CAP         = ether(config.crowdSaleCap_ETH);
+  const GOAL        = ether(config.crowdSaleGoal_ETH);  
+  const COIN_CAP    = ether(config.tokenCap);
 
   /*
   console.log([
-    startTime,
-    endTime,
+    START_TIME,
+    END_TIME,
     RATE.toNumber(),
     accounts[0],
-    cap.toNumber(),
-    goal.toNumber(),
-    coinCap.toNumber()
+    CAP.toNumber(),
+    GOAL.toNumber(),
+    COIN_CAP.toNumber()
   ]);
   */
 
   // uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet, uint256 _cap, uint256 _goal, uint256 _coinCap
-  return deployer.deploy(BestMillionsCrowdsale, startTime, endTime, RATE, accounts[0], cap, goal, coinCap).then(async () => {
-
+  return deployer.deploy(BestMillionsCrowdsale, START_TIME, END_TIME, RATE, accounts[0], CAP, GOAL, COIN_CAP).then(async () => {
     const instance  = await BestMillionsCrowdsale.deployed();
     const token     = await instance.token.call();
 
