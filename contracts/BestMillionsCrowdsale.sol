@@ -61,16 +61,16 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
 
     function calculateRate() internal view returns (uint256) {
                 
-        if ( now < startTime + 1 days )
-            return rate * 130 / 100;
-        else if ( now < startTime + 1 days + 7 days )
-            return rate * 120 / 100;
-        else if ( now < startTime + 1 days + 7 days + 7 days )
-            return rate * 115 / 100;
-        else if ( now < startTime + 1 days + 7 days + 7 days + 7 days )
-            return rate * 110 / 100;
-        else if ( now < startTime + 1 days + 7 days + 7 days + 7 days + 7 days )
-            return rate * 105 / 100;
+        if ( now <= startTime + 1 days )
+            return rate.mul(130).div(100);
+        else if ( now <= startTime + 1 days + 7 days )
+            return rate.mul(120).div(100);
+        else if ( now <= startTime + 1 days + 7 days + 7 days )
+            return rate.mul(115).div(100);
+        else if ( now <= startTime + 1 days + 7 days + 7 days + 7 days )
+            return rate.mul(110).div(100);
+        else if ( now <= startTime + 1 days + 7 days + 7 days + 7 days + 7 days )
+            return rate.mul(105).div(100);
         else
             return rate;
 
