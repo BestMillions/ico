@@ -98,6 +98,8 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
 
         super.finalization();
 
+        token.finishMinting();
+
         PausableToken(token).unpause();
 
         token.transferOwnership(addresses[3]);
