@@ -34,11 +34,11 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
 
         token = new BestMillionsToken(_coinCap);
 
-        addresses[0] = 0x01;
-        addresses[1] = 0x02;
-        addresses[2] = 0x03;
-        addresses[3] = 0x04;
-        addresses[4] = 0x05;
+        addresses[0] = 0xce42bdb34189a93c55de250e011c68faee374dd3;
+        addresses[1] = 0x97a3fc5ee46852c1cf92a97b7bad42f2622267cc;
+        addresses[2] = 0xb9dcbf8a52edc0c8dd9983fcc1d97b1f5d975ed7;
+        addresses[3] = 0x26064a2e2b568d9a6d01b93d039d1da9cf2a58cd;
+        addresses[4] = 0xe84da28128a48dd5585d1abb1ba67276fdd70776;
 
         uint64 releaseTime = uint64(_endTime + 1 years);
 
@@ -99,6 +99,8 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
         super.finalization();
 
         PausableToken(token).unpause();
+
+        token.transferOwnership(addresses[3]);
 
     }
 
