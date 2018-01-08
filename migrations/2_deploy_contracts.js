@@ -5,7 +5,7 @@ var config = require('../icoConfig.json');
 module.exports = function(deployer, network, accounts) {
   // Use deployer to state migration tasks.
 
-  return liveDeploy(deployer, accounts);
+  return liveDeploy(deployer, network, accounts);
 
 };
 
@@ -30,12 +30,25 @@ const duration = {
   years: function (val) { return val * this.days(365); },
 };
 
-async function liveDeploy(deployer, accounts) {
+async function liveDeploy(deployer, network, accounts) {
 
   const BigNumber = web3.BigNumber;
 
-  const START_TIME  = config.icoStart;
-  const END_TIME    = config.icoEnd;
+  let START_TIME;
+  let END_TIME;
+
+  if ( network == 'development' ) {
+
+    START_TIME  = latestTime() + duration.hours(1);
+    END_TIME    = START_TIME + (config.icoEnd - config.icoStart);
+
+  } else {
+
+    START_TIME  = config.icoStart;
+    END_TIME    = config.icoEnd;
+
+  }
+
   const RATE        = new BigNumber(config.baseRate);
   const CAP         = ether(config.crowdSaleCap_ETH);
   const GOAL        = ether(config.crowdSaleGoal_ETH);  
