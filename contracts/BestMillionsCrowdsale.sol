@@ -47,8 +47,6 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
         timeLocks[2] = new TokenTimelock(token, addresses[2], releaseTime);
         timeLocks[3] = new TokenTimelock(token, addresses[3], releaseTime);
 
-        PausableToken(token).pause();
-
     }
 
     function createTokenContract() internal returns (MintableToken) {
