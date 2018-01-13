@@ -17,8 +17,6 @@ contract BestMillionsToken is CappedToken, PausableToken, BurnableToken {
         CappedToken(_cap)
         public
     {
-
-        paused = true;
         
     }
 
