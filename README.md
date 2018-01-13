@@ -1,19 +1,72 @@
-# Best Millions Token Sale
-In this document, we describe the token sale specification and implementation, and give an overview over the smart contracts structure.
-## Informal Specification
-  Best Millions ICO 
-  Sale starts 15.02.2018. and ends 22.03.2018.
-  Token name: BMT
-  
-  For additional informations visit [bestmillions.com](http://www.bestmillions.com/)
-  
-## Detailed description
-### Overview of flow
-Denote by T the start time of the token sale.
-  TBD
-### Per module description
-  The system has 2 modules : the token sale (BestMillionsCrowdsale.sol) and the token (BestMillionsToken.sol)
-  Description TBD
 
-### Use of zeppelin code
-  We use open-zeppling code for (define all contracts).
+# Best Millions
+Solidity smart contracts for the Best Millions token and pre-/crowdsale. For additional informations visit [bestmillions.com](http://www.bestmillions.com/)
+ 
+## Overview
+
+
+## Parameters
+
+### Token
+
+Parameters
+
+| Field            | Value         |
+|------------------|---------------|
+| Token name       | Best Millions |
+| Token Ticker     | BMT           |
+| Decimals         | 18            |
+| Total supply     | 500000000     |
+| Token Sale       | 74% Sale      |
+| Reserved tokens  | 15% Team      |
+| 				   | 4% Advisors   |
+|				   | 4% Development Fund
+|	               | 3% Bounty     |
+
+### Pre-sale
+
+Parameters
+
+| Field              	| Value                      	|
+|-----------------------|-------------------------------|
+| Tiers              	| 1                         	|
+| Supply             	| ? BMT                	|
+| Allow Modifying       | No|                       	|
+| Start date         	| ? |
+| End date           	| ? 	|
+
+### Crowdsale
+
+Parameters
+
+| Field              	| Value                      	|
+|-----------------------|-------------------------------|
+| Tiers              	| 1                         	|
+| Supply             	| ? BMT                	|
+| Allow Modifying       | No|                       	|
+| Start date         	| ? |
+| End date           	| ? 	|
+
+### Rate
+| Period| Bonus                      	|
+|-----------------------|-------------------------------|
+| Pre-sale| 30%                         	|
+| Week 1| 20%                	|
+| Week 2      | 15%|                       	|
+| Week 3         	| 10% |
+| Week 4           	| 5% 	|
+| Week 5           	|  	|
+
+
+
+Additional information:
+
+- Rate - how many tokens for 1 ETH (Final rate will be set on ?)
+- Supply - max cap of tokens for pre-sale. Token is mintable. Unsold tokens will not be produced.
+- "Allow modifying - Yes" means that rate, cap, minimum investment, start date, end date are modifiable
+
+## Deployed contracts (Source code + verified)
+	
+	TBD
+
+
