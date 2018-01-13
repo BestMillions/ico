@@ -43,7 +43,7 @@ Procedure can be summarized as follows:
 
 ### Specification
 
-Understanding of the specification was based on the description of the token sale provided in the README.md file in the github repository at the time of the audit. Also this audit takes into consideration white-paper given on www.bestmillions.com ICO web page on the date 2018-Jan-10.
+Understanding of the specification was based on the description of the token sale provided in the [README.md](https://github.com/BestMillions/ico/blob/master/README.md) file in the github repository at the time of the audit. Also this audit takes into consideration white-paper given on www.bestmillions.com ICO web page on the date 2018-Jan-10.
 Audit recognizes following specifications:
 1.	ICO is crowdsale that is time limited and capped. Crowdsale is refundable with defined soft cap under which all invested ethereum will be refunded to the investors. 
 2.	ICO Token is defined under name Best Millions token (BMT), has 18 decimals and after crowdsale ends, it won’t be possible of minting more tokens.
@@ -53,7 +53,7 @@ Audit recognizes following specifications:
 
 ### Source code 
 
-Audit covers source code given on gitHub repository github.com/BestMillions with the latest commit 2c8344ce3755e4a02776c7751d81ac13bf65f085. Audit covers two smart contracts named BestMillionsCrowdsale.sol and BestMillionsToken.sol representing   crowdsale and token contracts in that order.
+Audit covers source code given on gitHub repository github.com/BestMillions with the latest commit [2c8344ce3755e4a02776c7751d81ac13bf65f085](https://github.com/BestMillions/ico/commit/2c8344ce3755e4a02776c7751d81ac13bf65f085). Audit covers two smart contracts named BestMillionsCrowdsale.sol and BestMillionsToken.sol representing   crowdsale and token contracts in that order.
 
 ### Code review
 
