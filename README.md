@@ -62,8 +62,7 @@ Parameters
 Additional information:
 
 - Rate - how many tokens for 1 ETH (Final rate will be set on ?)
-- Supply - max cap of tokens for pre-sale. Token is mintable. Unsold tokens will not be produced.
-- "Allow modifying - Yes" means that rate, cap, minimum investment, start date, end date are modifiable
+- Supply - max cap of tokens for sale. Token is mintable. Unsold tokens will not be produced.
 
 ## Deployed contracts (Source code + verified)
 	
