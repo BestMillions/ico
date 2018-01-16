@@ -16,47 +16,31 @@ Parameters
 | Token name       | Best Millions |
 | Token Ticker     | BMT           |
 | Decimals         | 18            |
-| Total supply     | 500000000     |
-| Token Sale       | 74% Sale      |
-| Reserved tokens  | 15% Team      |
-| 				   | 4% Advisors   |
-|				   | 4% Development Fund
-|	               | 3% Bounty     |
+| Total supply     | 500,000,000   |
 
-### Pre-sale
-
-Parameters
-
-| Field              	| Value                      	|
-|-----------------------|-------------------------------|
-| Tiers              	| 1                         	|
-| Supply             	| ? BMT                	|
-| Allow Modifying       | No|                       	|
-| Start date         	| ? |
-| End date           	| ? 	|
 
 ### Crowdsale
 
 Parameters
 
-| Field              	| Value                      	|
-|-----------------------|-------------------------------|
-| Tiers              	| 1                         	|
-| Supply             	| ? BMT                	|
-| Allow Modifying       | No|                       	|
-| Start date         	| ? |
-| End date           	| ? 	|
+| Field         | Value                      				|
+|---------------|-------------------------------------------|
+| Supply 		| 74% of token supply =  370,000,000 BMT    |
+| Start date 	| GMT: Wednesday, March 7, 2018 12:00:00 AM |
+| End date 		| GMT: Thursday, April 12, 2018 12:00:00 AM |
+| Soft cap		| 2,320 ETH									|
+
 
 ### Rate
-| Period| Bonus                      	|
-|-----------------------|-------------------------------|
-| Pre-sale| 30%                         	|
-| Week 1| 20%                	|
-| Week 2      | 15%|                       	|
-| Week 3         	| 10% |
-| Week 4           	| 5% 	|
-| Week 5           	|  	|
 
+| Period 	| Bonus | BMT per ETH | Ends at               					 	|
+|-----------|-------|-------------|---------------------------------------------|
+| Pre-sale 	| 30%   | 20,800 BMT  | GMT: Wednesday, March 8, 2018 12:00:00 AM	|
+| Week 1 	| 20%   | 19,200 BMT  | GMT: Wednesday, March 15, 2018 12:00:00 AM	|
+| Week 2 	| 15% 	| 18,400 BMT  | GMT: Wednesday, March 22, 2018 12:00:00 AM	|
+| Week 3 	| 10% 	| 17,600 BMT  | GMT: Wednesday, March 29, 2018 12:00:00 AM	|
+| Week 4 	| 5% 	| 16,800 BMT  | GMT: Wednesday, April 5, 2018 12:00:00 AM	|
+| Week 5 	| 0% 	| 16,000 BMT  | GMT: Wednesday, April 12, 2018 12:00:00 AM 	|
 
 
 Additional information:
