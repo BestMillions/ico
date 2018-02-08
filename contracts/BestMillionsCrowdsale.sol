@@ -118,14 +118,14 @@ contract BestMillionsCrowdsale is CappedCrowdsale, RefundableCrowdsale {
         // Team member 2 gets 3.75% of total supply locked for 1 year
         token.mint(timeLocks[1], totalSupply.mul(375).div(7400));
 
-        // Team member 2 gets 3.75% of total supply locked for 1 year
+        // Team member 3 gets 3.75% of total supply locked for 1 year
         token.mint(timeLocks[2], totalSupply.mul(375).div(7400));
 
-        // Team members 3 and 4 get 1% of total supply locked for 1 year
-        token.mint(timeLocks[3], totalSupply.mul(10).div(740));
+        // Tech team members get 2% of total supply locked for 1 year
+        token.mint(timeLocks[3], totalSupply.mul(20).div(740));
 
-        // Rest of the tokens is transfered to a multisig wallet
-        token.mint(addresses[4], totalSupply.mul(100).div(740));
+        // 9% is transfered to a multisig wallet
+        token.mint(addresses[4], totalSupply.mul(90).div(740));
 
     }
 
