@@ -26,21 +26,21 @@ Parameters
 | Field         | Value                      				|
 |---------------|-------------------------------------------|
 | Supply 		| 74% of token supply =  370,000,000 BMT    |
-| Start date 	| GMT: Wednesday, March 7, 2018 12:00:00 AM |
-| End date 		| GMT: Thursday, April 12, 2018 12:00:00 AM |
+| Start date 	| T (TBA) 									|
+| End date 		| T + 1 day + 5 weeks 						|
 | Soft cap		| 2,320 ETH									|
 
 
 ### Rate
 
-| Period 	| Bonus | BMT per ETH | Ends at               					 	|
-|-----------|-------|-------------|---------------------------------------------|
-| Pre-sale 	| 30%   | 20,800 BMT  | GMT: Wednesday, March 8, 2018 12:00:00 AM	|
-| Week 1 	| 20%   | 19,200 BMT  | GMT: Wednesday, March 15, 2018 12:00:00 AM	|
-| Week 2 	| 15% 	| 18,400 BMT  | GMT: Wednesday, March 22, 2018 12:00:00 AM	|
-| Week 3 	| 10% 	| 17,600 BMT  | GMT: Wednesday, March 29, 2018 12:00:00 AM	|
-| Week 4 	| 5% 	| 16,800 BMT  | GMT: Wednesday, April 5, 2018 12:00:00 AM	|
-| Week 5 	| 0% 	| 16,000 BMT  | GMT: Wednesday, April 12, 2018 12:00:00 AM 	|
+| Period 	| Bonus | BMT per ETH | Ends at             |
+|-----------|-------|-------------|---------------------|
+| Pre-sale 	| 30%   | 20,800 BMT  | T + 1 day			|
+| Week 1 	| 20%   | 19,200 BMT  | T + 1 day + 1 week	|
+| Week 2 	| 15% 	| 18,400 BMT  | T + 1 day + 2 weeks	|
+| Week 3 	| 10% 	| 17,600 BMT  | T + 1 day + 3 weeks	|
+| Week 4 	| 5% 	| 16,800 BMT  | T + 1 day + 4 weeks	|
+| Week 5 	| 0% 	| 16,000 BMT  | T + 1 day + 5 weeks	|
 
 
 Additional information:
